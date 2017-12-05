@@ -68,9 +68,9 @@ function displayBuy() {
                 console.log("Your total for " + "(" + answer.quantity + ") " + res[chosenId].product_name +
                  " is: " + res[chosenId].price.toFixed(2)  * chosenQuantity + "\n");
                 connection.query("UPDATE products SET ? WHERE ?", [{
-                    stock_quantity: answer.itemId.stock_quantity - answer.quantity
+                    stock_quantity: res[chosenId].stock_quantity - answer.quantity
                 }, {
-                    id: res[chosenId].id
+                    item_id: answer.itemId
                 }], function(err, res) {
                     //console.log(err);
                     displayBuy();
@@ -78,7 +78,7 @@ function displayBuy() {
 // 1. if out of stock - 
     // display "Insufficient Quantity!" and prevent order
             } else {
-                console.log("Sorry, insufficient quanity at this time.");
+                console.log("Sorry, insufficient quantity to fulfill your order at this time.");
                 displayBuy();
             }
         })
