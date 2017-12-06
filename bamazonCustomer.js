@@ -19,12 +19,14 @@ function displayBuy() {
     connection.query('SELECT * FROM products', function(err, res) {
         //creates the table
         var table = new Table({
-            // head: ['ID', 'Product Name', 'Department', 'Price', 'Stock Quantity']
+            // code used to see quantity change
+            // head: ['ID', 'Product Name', 'Department', 'Price', 'Stock Quantity'] 
             head: ['ID', 'Product Name', 'Department', 'Price']
         });
         console.log("WELCOME TO THE BAMAZON SHOP");
         console.log("=============="+"=============");
         for (var i = 0; i < res.length; i++) {
+            // code used to see quantity change
             // table.push([res[i].item_id, res[i].product_name, res[i].department_name, res[i].price.toFixed(2), res[i].stock_quantity]);
             table.push([res[i].item_id, res[i].product_name, res[i].department_name, res[i].price.toFixed(2)]);
         }
