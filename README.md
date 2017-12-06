@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/30815230/33637013-52298534-d9e4-11e7-9b2f-e6c521c9e42b.png)
 
-2. The Bamazon Shop is displayed. Shoper is able to see the Product ID, Name, Department, and Price. The first prompt is displayed, asking the shopper to choose a product ID to buy.
+2. The Bamazon Shop is displayed. The shopper is able to see the Product ID, Name, Department, and Price. The first prompt is displayed, asking the shopper to choose a product ID to buy.
 
 ![image](https://user-images.githubusercontent.com/30815230/33637026-5c891256-d9e4-11e7-8815-c45848acee4b.png)
 
